@@ -1,2 +1,2 @@
-# triValleyParks
-Park information in Dublin, San Ramon, and Pleasanton
+# Tri-Valley Parks
+Park information for Dublin, San Ramon, and Pleasanton
