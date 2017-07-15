@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><%= request.getParameter("park") %></title>
+<link rel="stylesheet" href="CSS/parkStyle.css">
 <%@include file="templates/parkParameters.html" %>
 
 </head>
