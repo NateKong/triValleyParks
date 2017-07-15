@@ -5,13 +5,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TRI-VALLEY PARKS</title>
+	<link rel="icon" href="images/favicon.ico" sizes="32x32" alt="images/faviconCopy.jpg">
 	<link rel="stylesheet" href="CSS/style.css">
 	<%@include file="templates/parkParameters.html" %>
 </head>
 <body>
 <%@include file="templates/parkHeader.html" %>
 
-
+UNOFFICAL SITE
 
 
 Make this like CL with 3 rows -> Dublin Pleasanton San Ramon
