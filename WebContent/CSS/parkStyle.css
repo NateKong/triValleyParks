@@ -11,10 +11,12 @@ a:visited{
 	color:inherit;
 }
 
-ul.normal li a:hover{
+ul li a:hover{
 	color:#0091ea;
 }
-
+a:hover{
+	color:#0091ea;
+}
 .logo{
 	margin-top:15px;
 	margin-bottom:15px;
