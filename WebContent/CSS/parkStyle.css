@@ -1,1 +1,21 @@
 @CHARSET "UTF-8";
+.city{
+	font-weight:bold;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	background-color:#81c784;
+	color:#202020;
+}
+
+a:visited{
+	color:inherit;
+}
+
+ul.normal li a:hover{
+	color:#0091ea;
+}
+
+.logo{
+	margin-top:15px;
+	margin-bottom:15px;
+}

@@ -1,1 +1,37 @@
 @CHARSET "UTF-8";
+.city{
+	font-weight:bold;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	background-color:#81c784;
+}
+
+p.city {
+	color:#202020;
+}
+
+ul.park li{
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	padding-left: 5%;
+}
+
+ul.park li a{
+	color:#303030;
+}
+
+a:visited{
+	color:inherit;
+}
+
+a:hover{
+	color:#0091ea;
+}
+
+footer.footer-copyright a:hover{
+	color:#0091ea;
+}
+
+ul.park li a:hover{
+	color:#0091ea;
+}
