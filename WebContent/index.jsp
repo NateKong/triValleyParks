@@ -5,7 +5,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TRI-VALLEY GROUP PICNIC</title>
-	<link rel="icon" href="/www/Tri-Valley-Parks/WebContent/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/www/Tri-Valley-Parks/WebContent/CSS/style.css">
 	
 	<%@include file="templates/parkParameters.html" %>
