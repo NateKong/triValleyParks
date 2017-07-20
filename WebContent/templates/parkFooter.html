@@ -1,24 +1,23 @@
-  <footer class="blue topPad">
-    <div class="container">
-      <div class="row">
-        <div class="col s7">
-        </div>
-        <div class="col s5">
-          <h5 class="white-text">Official Links</h5>
-          <ul class="normal">
-			<li><a class="white-text" href="#">park info</a></li>
-			<li><a class="white-text" href="#">park info (load dynamically)</a></li>
-          </ul>
-        </div>
+<footer class="green topPad">
+  <div class="container">
+    <div class="row">
+      <div class="col s7">
+      </div>
+      <div class="col s5">
+        <h5 class="white-text">Official Links</h5>
+        <ul class="normal">
+			<jsp:include page="${footerLinks}" flush="true" />
+        </ul>
       </div>
     </div>
-    <div class="footer-copyright indigo darken-4 white-text">
-      <div class="row">
-        <div class="col s1"></div>
-        <div class="col s4 center">July 2017</div>
-        <div class="col s1"></div>
-        <div class="col s4 center"><a href="http://natekong.github.io" style="color:#FFF;">Created by: Nate Kong</a></div>
-        <div class="col s2"></div>  
-      </div>
+  </div>
+  <div class="footer-copyright green darken-4 white-text">
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="col s4 center">July 2017</div>
+      <div class="col s1"></div>
+      <div class="col s4 center"><a href="http://natekong.github.io" style="color:#FFF;">Nate Kong</a></div>
+      <div class="col s2"></div>  
     </div>
-  </footer>
+  </div>
+</footer>
