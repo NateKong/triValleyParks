@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import java.text.DecimalFormat;
 
 /**
  * Servlet implementation class TVParks
@@ -17,7 +18,7 @@ public class TVParks extends HttpServlet {
 
 	// JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "jdbc:mysql://localhost/park/";
+   static final String DB_URL = "jdbc:mysql://localhost/park";
 
    //  Database credentials
    static final String USER = "root";
@@ -34,8 +35,8 @@ public class TVParks extends HttpServlet {
 		String city = "";
 		String address = "";
 		String amenities = "";
-		int capacity;
-		double cost;
+		int capacity = 0;
+		double cost = 0;
 		
 		//parse information
 		String park = request.getParameter("park");
@@ -57,6 +58,7 @@ public class TVParks extends HttpServlet {
 	      stmt = conn.createStatement();
 	      String sql;
 	      sql = "SELECT * FROM groupParks WHERE parkName='" + park + "'";
+	      System.out.println(sql);
 	      ResultSet rs = stmt.executeQuery(sql);
 
 	      //Extract data from result set
@@ -68,7 +70,9 @@ public class TVParks extends HttpServlet {
 	         address = rs.getString("address");
 	         amenities = rs.getString("amenities");
 	      }
+	      
 	      //Clean-up environment
+	      System.out.println("close connection");
 	      rs.close();
 	      stmt.close();
 	      conn.close();
@@ -106,12 +110,26 @@ public class TVParks extends HttpServlet {
 			request.setAttribute("link", "templates/sanRamon.html");
 			request.setAttribute("footerLinks", "templates/footerSanRamon.html");
 		}
+		request.setAttribute("city",city);
+		request.setAttribute("capacity",capacity);
+		request.setAttribute("cost",costCurrancy(cost));
+		request.setAttribute("address",address);
+		request.setAttribute("amenities",addCommas(amenities));
 		//Serve JSP template with park info
 		request.getRequestDispatcher("parkPage.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
+	}
+	
+	private String costCurrancy( double d){
+		DecimalFormat df = new DecimalFormat("#.00");
+		return "$ " + df.format(d);
+	}
+	
+	private String addCommas( String str){
+		return str.replaceAll("/", ", ");
 	}
 
 }
