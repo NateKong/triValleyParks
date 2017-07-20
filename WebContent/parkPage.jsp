@@ -8,19 +8,19 @@
 	<link rel="icon" href="images/<%= request.getParameter("city") %>.ico" sizes="32x32">
 	<link rel="stylesheet" href="CSS/parkStyle.css">
 	<%@include file="templates/parkParameters.html" %>
+
 </head>
-<body>
+<body class="lime lighten-3">
 	<%@include file="templates/parkHeader.html" %>
-	<%@include file="templates/dublin.html" %>
+	<jsp:include page="${link}" flush="true" />
 
-
-
-<p>Park: <%= request.getParameter("park") %></p>
-<p>City: <%= request.getParameter("city") %></p>
-<p>Zip: <%= request.getAttribute("zip") %></p>
-
-
-
+	<h5 class="city center" style="margin-top:0px;"><%= request.getParameter("park") %></h5>
+	<div class="container lime lighten-3">
+      <p>Address: ${address}</p>
+      <p>Capacity: ${capacity}</p>
+      <p>Cost: ${cost}</p>
+      <p>Amenities: ${amenities}</p>
+	</div>
 
 	<%@include file="templates/parkFooter.html" %>
 </body>
